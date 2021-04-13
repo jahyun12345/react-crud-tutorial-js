@@ -7,7 +7,6 @@ import Control from'./components/Control';
 import ReadContent from './components/ReadContent';
 import CreateContent from './components/CreateContent';
 import UpdateContent from './components/UpdateContent';
-import DeleteContent from './components/DeleteContent';
 
 class App extends Component {
   constructor(props) {
@@ -59,7 +58,7 @@ class App extends Component {
         // var _contents = Array.from(this.state.contents);
         // _contents.push({id: this.max_content_id, title:_title, desc:_desc});
         // * concat
-        var _contents = this.state.contents.concat({id: this.max_content_id, title:_title, desc:_desc});
+        var _contents = this.state.contents.concat({id:this.max_content_id, title:_title, desc:_desc});
         this.setState({contents:_contents, mode:'read', selected_content_id:this.max_content_id});
       }.bind(this)} />
     } else if (this.state.mode === "update") {
